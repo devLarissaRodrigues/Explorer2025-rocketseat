@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "API desenvolvida no programa Explorer da Rocketseat",
   "dependencies": {
+    "api": "file:",
     "express": "^4.21.2"
   },
   "devDependencies": {
