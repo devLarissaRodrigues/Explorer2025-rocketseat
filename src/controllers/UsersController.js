@@ -1,3 +1,5 @@
+const AppError = require("../utils/AppError");
+
 class UsersController {
     /**
      * Controller pode ter função de:
@@ -7,11 +9,15 @@ class UsersController {
      * update - PUT para atualizar um registro
      * delete - DELETE para remover um registro
      */
-
-
-    create(request, response){
+    async create(request, response){
         const { name, email, password} = request.body;
-        response.json({name, email, password});
+
+        if(!name){
+            throw new AppError("O nome é obrigatório");
+        }
+
+
+        response.status(201).json({name, email, password});
     }
 }
 
