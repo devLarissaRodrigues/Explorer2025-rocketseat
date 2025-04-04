@@ -1,4 +1,4 @@
-const knex = requite('../database/knex');
+const knex = require('../database/knex');
 
 class NotesController{
     async create(request, response){
