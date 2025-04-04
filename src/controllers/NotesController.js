@@ -1,4 +1,4 @@
-const knex = require('../database/knex');
+const knex = require("./database/knex");
 
 class NotesController{
     async create(request, response){
@@ -19,8 +19,6 @@ class NotesController{
         });
 
         await knex("links").insert(linksInsert);
-
-
 
         const tagsInsert = tags.map(name => {
             return {
